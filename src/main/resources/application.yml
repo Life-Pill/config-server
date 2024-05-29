@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: CONFIG-SERVER
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Life-Pill/configuration-server-repository
+          clone-on-start: true
+          default-label: main
+
+server:
+    port: 8888
+
+eureka:
+  instance:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+
